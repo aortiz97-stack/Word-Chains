@@ -63,8 +63,8 @@ class WordChainer
         path = [target]
         curr = target
 
-        while path[0]
-            path.unshift(@all_seen_words[curr])
+        while @all_seen_words[curr]
+            path.unshift(@all_seen_words[curr]) if !@all_seen_words[curr].nil?
             curr = path[0]
         end
 

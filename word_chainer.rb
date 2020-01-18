@@ -43,6 +43,12 @@ class WordChainer
             end
         end
 
+        @current_words = new_current_words
+
+        new_current_words
+    end
+
+    def see_word_and_adjacent
         @all_seen_words.each do |adjacent_word, current_word|
             if current_word
                 puts "Current word: " + current_word + "; Adjacent Word: " + adjacent_word
@@ -50,9 +56,6 @@ class WordChainer
                 puts "Current word: N/A; " + "Adjacent Word: " + adjacent_word
             end
         end
-        @current_words = new_current_words
-
-        new_current_words
     end
 
 
